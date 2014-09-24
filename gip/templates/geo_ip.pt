@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>IP/HOST GEOLOCATION TOOL</title>
+  <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+  <form method="post" action="/geoip" class="login">
+  
+    <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
+     <p> <label for="login">IP/Hostname:</label>
+      <input type="text" name="ip" id="login" value="www.karunya.edu">
+    </p>
+   
+    <p class="login-submit">
+      <button type="submit" class="login-button">IPGeo</button>
+    </p>
+    
+</body>
+</html>

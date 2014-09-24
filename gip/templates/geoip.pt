@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>IP/HOST GEOLOCATION TOOL</title>
+  <link rel="stylesheet" href="/static/style.css">
+    <style>
+      #map_canvas {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(${coordinates}),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+  
+</head>
+<body>
+
+  <form method="post" action="/geoip" class="login">
+  <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
+    <p>
+      <label for="login">IP/Hostname:</label>
+      <input type="text" name="ip" id="login" value="${host}">
+    </p>
+    <p class="login-submit">
+      <button type="submit" class="login-button">IPGeo</button>
+    </p>
+    <p><div align="center"><a href="/">Home Page</a></div></p> <div align="center">
+     <p>----------------------------------------------</p>
+    <p>Geolocation for host: ${host}</p>
+    <p>----------------------------------------------</p>
+    <p>IP/HOST : ${ip_host}</p>
+    <p>Country : ${country}</p>
+    <p>City : ${city}</p>
+    <p>Coordinates : ${coordinates}</p>
+     <p>Google Maps Link: <a href="http://maps.google.com/maps?q=${coordinates}" target="_blank"> Here</a></p>  
+    
+    </div>
+ <div id="map_canvas"></div>
+
+</body>
+</html>
+
