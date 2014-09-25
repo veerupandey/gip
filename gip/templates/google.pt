@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>IP/HOST GEOLOCATION TOOL</title>
+  <link rel="stylesheet" href="/static/style.css">
+  
+  <script type="text/javascript">
+                                    function do_google_search(type) 
+                        {
+                            if(document.getElementById('p1').value.length == 0) {
+                                alert_element('p1', 'This field must not be empty');
+                                return;
+                            }
+                            site = document.getElementById('p1').value;
+                            url = 'https://www.google.com/search?q=';
+                            url += 'site:' + site;
+                            switch(type)
+                            {
+                                case 1:
+                                    url += '+intitle:index.of';
+                                    break;
+                                case 2:
+                                    url += '+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini';
+                                    break;
+                                case 3:
+                                    url += '+ext:sql+|+ext:dbf+|+ext:mdb';
+                                    break;
+                                case 4:
+                                    url += '+ext:log';
+                                    break;
+                                case 5:
+                                    url += '+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup';
+                                    break;
+                                case 6:
+                                    url += '+inurl:login';
+                                    break;
+                                case 7:
+                                    url += '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occured"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
+                                    break;
+                                case 8:
+                                    url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:cvs';
+                                    break;
+                                case 9:
+                                    url += '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"';
+                                    break;
+                            }
+                            window.open(url,'',                         'scrollbars=yes,menubar=no,height=600,width=800,resizable=yes,toolbar=yes,menubar=no,location=no,status=no');
+
+                           
+                        }
+                    </script>
+</head>
+<body>
+
+
+
+  
+                    <form  class="login" id='form' action="/geoip" method="get">
+  
+    <div align="center"><span align="center" style="color: silver; font-size: 15; ">Google Hacking</span></div>
+     <p> <label for="login">Host</label>
+      <input type="text" name="target domain" id="p1" value="karunya.edu ">
+    </p>
+             
+              
+    <div align="center">
+    <p><a href="" onclick="do_google_search(1)">Directory listing vulnerabilities</a></p>
+                    
+                    
+     <p> <a href="" onclick="do_google_search(2)">Configuration files</a>
+                        </p>
+                    
+                        
+                        <p > 
+                            <a href="" onclick="do_google_search(3)">Database files</a>
+                            </p>
+                   
+                            <p>                      
+                            <a  href=""  onclick="do_google_search(4)">Log files</a>
+                        
+                    </p>
+                   <p >  <a href="" onclick="do_google_search(5)"> Backup and old files</a>
+                       </p>
+                       <p > <a href="" onclick="do_google_search(6)">login pages</a>
+                       </p>
+                       
+                       <p >                        
+                            <a href="" onclick="do_google_search(7)">SQL errors</a>
+                       </p>
+                       <p >                       
+                            <a href="" onclick="do_google_search(8)">Search for publicly exposed documents</a>
+                        </p>
+                        <p>
+                        
+                            <a href="" onclick="do_google_search(9)">phpinfo()</a>
+                        </p>
+    </div>
+</body>
+</html>
