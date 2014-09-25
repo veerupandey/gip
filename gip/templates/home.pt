@@ -9,69 +9,52 @@
 
 <script type="text/javascript" src="static/jquery.js"></script>
 <script type="text/javascript" src="js.js"></script>
-<script type="text/javascript">
-var bustcachevar=1 
-var loadedobjects=""
-var rootdomain="http://"+window.location.hostname
-var bustcacheparameter=""
-
-function ajaxpage(url, containerid){
-var page_request = false
-if (window.XMLHttpRequest) // if Mozilla, Safari etc
-page_request = new XMLHttpRequest()
-else if (window.ActiveXObject){ // if IE
-try {
-page_request = new ActiveXObject("Msxml2.XMLHTTP")
-} 
-catch (e){
-try{
-page_request = new ActiveXObject("Microsoft.XMLHTTP")
-}
-catch (e){}
-}
-}
-else
-return false
-page_request.onreadystatechange=function(){
-loadpage(page_request, containerid)
-}
-if (bustcachevar) //if bust caching of external page
-bustcacheparameter=(url.indexOf("?")!=-1)? "&"+new Date().getTime() : "?"+new Date().getTime()
-page_request.open('GET', url+bustcacheparameter, true)
-page_request.send(null)
-}
-
-function loadpage(page_request, containerid){
-if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1))
-document.getElementById(containerid).innerHTML=page_request.responseText
-}
-
-function loadobjs(){
-if (!document.getElementById)
-return
-for (i=0; i<arguments.length; i++){
-var file=arguments[i]
-var fileref=""
-if (loadedobjects.indexOf(file)==-1){ //Check to see if this object has not already been added to page before proceeding
-if (file.indexOf(".js")!=-1){ //If object is a js file
-fileref=document.createElement('script')
-fileref.setAttribute("type","text/javascript");
-fileref.setAttribute("src", file);
-}
-else if (file.indexOf(".css")!=-1){ //If object is a css file
-fileref=document.createElement("link")
-fileref.setAttribute("rel", "stylesheet");
-fileref.setAttribute("type", "text/css");
-fileref.setAttribute("href", file);
-}
-}
-if (fileref!=""){
-document.getElementsByTagName("head").item(0).appendChild(fileref)
-loadedobjects+=file+" " 
-}
-}
-}
-
+<script>
+$(document).ready(function () {
+	$("#gh").click(function () {
+		$.get(
+    '/google_hacking',
+    function(response) {
+        $("#content").html(response);
+});
+	});
+});
+$(document).ready(function () {
+	$("#geoip").click(function () {
+		$.get(
+    '/geo_ip',
+    function(response) {
+        $("#content").html(response);
+});
+	});
+});
+$(document).ready(function () {
+	$("#gh").click(function () {
+		$.get(
+    '/google_hacking',
+    function(response) {
+        $("#content").html(response);
+});
+	});
+});
+$(document).ready(function () {
+	$("#scan").click(function () {
+		$.get(
+    '/scan',
+    function(response) {
+        $("#content").html(response);
+});
+	});
+});
+$(document).ready(function () {
+	$("#dist").click(function () {
+		$.get(
+    '/distance',
+    function(response) {
+        $("#content").html(response);
+});
+	});
+});
 </script>
 </head>
 <body>
@@ -79,10 +62,10 @@ loadedobjects+=file+" "
     <h1>GIP</h1>
     <ul id="nav">
         <li><a href="/">Home</a></li>
-        <li><a href="javascript:ajaxpage('/geo_ip', 'content');">GeoIp</a></li>
-        <li><a href="javascript:ajaxpage('/scan', 'content');">Scanner</a></li>
-        <li><a href="javascript:ajaxpage('/distance', 'content');">Distance Calculator</a></li>
-        <li><a href="javascript:ajaxpage('/google_hacking', 'content');">Google Hacking</a></li>
+        <li><div id='geoip'><a>GeoIp</a></div></li>
+        <li><div id='scan'><a>Scanner</a></div></li>
+        <li><div id='dist'><a>Distance Calculator</a></div></li>
+        <li><div id='gh'><a>Google Hacking</a></div></li>
         
     </ul>
     <div id="content">    	

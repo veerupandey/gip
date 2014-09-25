@@ -53,11 +53,7 @@
                     </script>
 </head>
 <body>
-
-
-
-  
-                    <form  class="login" id='form' action="/geoip" method="get">
+<form class="login">
   
     <div align="center"><span align="center" style="color: silver; font-size: 15; ">Google Hacking</span></div>
      <p> <label for="login">Host</label>

@@ -27,6 +27,7 @@ gip/templates/dist.pt
 gip/templates/distance.pt
 gip/templates/geo_ip.pt
 gip/templates/geoip.pt
+gip/templates/google.pt
 gip/templates/home.pt
 gip/templates/scan.pt
 gip/templates/scanner.pt
