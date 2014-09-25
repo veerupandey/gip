@@ -29,17 +29,19 @@
   
 </head>
 <body>
-
-  <form method="post" action="/geoip" class="login">
-  <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
-    <p>
-      <label for="login">IP/Hostname:</label>
-      <input type="text" name="ip" id="login" value="${host}">
+<form  class="login" id='form' action="/geoip" method="get">
+  
+    <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
+     <p> <label for="login">IP/Hostname:</label>
+      <input type="text" name="ip" id="login" value="www.karunya.edu">
     </p>
+   <p><div align="center"><a href="/">Home Page</a></div></p>
     <p class="login-submit">
-      <button type="submit" class="login-button">IPGeo</button>
+      <button  type="submit" class="login-button" id="submit">IPGeo</button>
     </p>
-    <p><div align="center"><a href="/">Home Page</a></div></p> <div align="center">
+    <div class="result"></div>
+<div align="center">
+
      <p>----------------------------------------------</p>
     <p>Geolocation for host: ${host}</p>
     <p>----------------------------------------------</p>

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <form method="post" action="/distance_calci" class="login">
+  <form method="get" action="/distance_calci" class="login">
   
     <div align="center"><span align="center" style="color: silver; font-size: 15; ">GeoDistance Calculation Tool</span></div>
      <p> <label for="location">Latitude1:</label>

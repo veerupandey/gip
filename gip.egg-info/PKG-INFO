@@ -6,19 +6,36 @@ Home-page: UNKNOWN
 Author: UNKNOWN
 Author-email: UNKNOWN
 License: UNKNOWN
-Description: gip README
-        ==================
+Description: gip:Information about host/ip
+        ______________________________
+        Installation:
+        ______________________________
+        step 1: virtualenv env
         
-        Getting Started
-        ---------------
+        step 2: cd gip
         
-        - cd <directory containing this file>
         
-        - $venv/bin/python setup.py develop
+        step 3: env/bin/python setup.py develop
         
-        - $venv/bin/initialize_gip_db development.ini
+        step 4: env/bin/initialize_gip_db development.ini 
         
-        - $venv/bin/pserve development.ini
+        step 5: env/bin/pserve development.ini
+        ______________________________________
+        Includes:
+        
+        _______________________________________
+        1. IP Geolocation Tool
+        
+        2. Port Scanner
+        
+        3. Distance Calculation between two points
+        
+        ______________________________________
+        Test:
+        _______________________________________
+        -->Tested on Ubuntu and Debian successfully
+        
+        -->Should work on any plateform Windows/Linux/Mac
         
         
         

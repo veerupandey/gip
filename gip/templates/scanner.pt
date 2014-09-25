@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <form method="post" action="/scanner" class="login">
+  <form method="get" action="/scanner" class="login">
   <div align="center"><span align="center" style="color: silver; font-size: 15; ">Port Scanner Tool</span></div>
     <p>
       <label for="ip">IP:</label>
