@@ -28,15 +28,7 @@ $(document).ready(function () {
 });
 	});
 });
-$(document).ready(function () {
-	$("#gh").click(function () {
-		$.get(
-    '/google_hacking',
-    function(response) {
-        $("#content").html(response);
-});
-	});
-});
+
 $(document).ready(function () {
 	$("#scan").click(function () {
 		$.get(
