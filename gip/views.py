@@ -9,7 +9,7 @@ from .models import (
     )
 import httplib, string, sys, re
 import nmap
-import math,socket
+import math
 
 
 @view_config(route_name='home', renderer='templates/mytemplate.pt')
@@ -48,7 +48,6 @@ def geo_view(request):
 @view_config(route_name='geoip', renderer='templates/geoip.pt')
 def geoip_view(request):
     host= request.GET.get('ip')
-    print host
     body = "ips=" + host
     exists = MyModel.exists(host)
     if exists:
