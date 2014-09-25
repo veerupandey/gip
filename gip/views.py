@@ -164,6 +164,12 @@ def distance_calci_view(request):
     }
 
 
+@view_config(route_name='google_hacking', renderer='templates/google.pt')
+def ghacking_view(request):
+    return dict(desc='GOOGLE HACKING')
+
+
+
 
 
 

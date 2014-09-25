@@ -82,6 +82,7 @@ loadedobjects+=file+" "
         <li><a href="javascript:ajaxpage('/geo_ip', 'content');">GeoIp</a></li>
         <li><a href="javascript:ajaxpage('/scan', 'content');">Scanner</a></li>
         <li><a href="javascript:ajaxpage('/distance', 'content');">Distance Calculator</a></li>
+        <li><a href="javascript:ajaxpage('/google_hacking', 'content');">Google Hacking</a></li>
         
     </ul>
     <div id="content">    	

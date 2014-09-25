@@ -22,5 +22,6 @@ def main(global_config, **settings):
     config.add_route('scan', '/scan')
     config.add_route('distance','/distance')
     config.add_route('distance_calci','/distance_calci')
+    config.add_route('google_hacking','/google_hacking')
     config.scan()
     return config.make_wsgi_app()
