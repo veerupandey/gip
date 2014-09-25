@@ -33,7 +33,7 @@
   
     <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
      <p> <label for="login">IP/Hostname:</label>
-      <input type="text" name="ip" id="login" value="www.karunya.edu">
+      <input type="text" name="ip" id="login" value="${host}">
     </p>
    <p><div align="center"><a href="/">Home Page</a></div></p>
     <p class="login-submit">
