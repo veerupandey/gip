@@ -5,11 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Distance Calculation Tool TOOL</title>
   <link rel="stylesheet" href="/static/style.css">
+ <script>
+  $("form").submit(function() {
+    $.post($(this).attr("action"), $(this).serialize(), function(data) {
+        $("#c").html(data);
+    });
+    return false; // prevent normal submit
+});
+</script>
 
 </head>
 <body>
 
-  <form method="get" action="/distance_calci" class="login">
+  <form  action="/distance_calci" class="login">
   
     <div align="center"><span align="center" style="color: silver; font-size: 15; ">GeoDistance Calculation Tool</span></div>
      <p> <label for="location">Latitude1:</label>
@@ -28,6 +36,6 @@
     <p class="login-submit">
       <button type="submit" class="login-button">IPGeo</button>
     </p>
-    
+    <div id="c" align="center"></div>
 </body>
 </html>

@@ -5,11 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>IP/HOST GEOLOCATION TOOL</title>
   <link rel="stylesheet" href="/static/style.css">
- 
-
+<script>
+  $("form").submit(function() {
+    $.post($(this).attr("action"), $(this).serialize(), function(data) {
+        $("#c").html(data);
+    });
+    return false; // prevent normal submit
+});
+</script> 
 </head>
 <body>
-  <form method="get" action="/scanner" class="login">
+  <form  action="/scanner" class="login">
   <div align="center"><span align="center" style="color: silver; font-size: 15; ">Port Scanner Tool</span></div>
     <p>
       <label for="ip">IP:</label>
@@ -20,9 +26,8 @@
       <input type="text" name="port"  value="80">
     </p>
     <p class="login-submit">
-      <button type="submit" class="login-button">Scan</button>
+      <button type="submit" class="login-button" id="b1">Scan</button>
     </p>
-    
-    
+      <div id="c" align="center"></div> 
 </body>
 </html>

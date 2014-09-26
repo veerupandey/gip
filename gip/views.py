@@ -43,11 +43,12 @@ def my_view(request):
 
 @view_config(route_name='geo_ip',renderer='templates/geo_ip.pt')
 def geo_view(request):
-    return dict(title='IP Geolocation Tool')
+    return dict(title='IP Geolocation')
 
 @view_config(route_name='geoip', renderer='templates/geoip.pt')
 def geoip_view(request):
-    host= request.GET.get('ip')
+    coordinates=''
+    host= request.POST.get('ip')
     body = "ips=" + host
     exists = MyModel.exists(host)
     if exists:
@@ -109,9 +110,9 @@ def scan_view(request):
 @view_config(route_name='scanner',renderer='templates/scanner.pt')
 def scanner_view(request):
     msg=None
-    host=request.GET.get('ip')
+    host=request.POST.get('ip')
     host=str(host)
-    port=str(request.GET.get('port'))
+    port=str(request.POST.get('port'))
 
     nmScan = nmap.PortScanner()
     nmScan.scan(host,port)
@@ -129,10 +130,10 @@ def distance_view(request):
 
 @view_config(route_name='distance_calci', renderer='templates/dist.pt')
 def distance_calci_view(request):
-    lat1=request.GET.get('lat1')
-    lat2=request.GET.get('lat2')
-    long1=request.GET.get('long1')
-    long2=request.GET.get('long2')
+    lat1=request.POST.get('lat1')
+    lat2=request.POST.get('lat2')
+    long1=request.POST.get('long1')
+    long2=request.POST.get('long2')
 
     degrees_to_radians = math.pi/180.0
 

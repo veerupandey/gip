@@ -92,7 +92,7 @@
                         
                             <a href="" onclick="do_google_search(9)">phpinfo()</a>
                         </p>
-                        <p>Note:Avoid clicking on link directly, use ctr+link</p>
+                        <p><b>Note:</b>Avoid clicking on link directly, use ctr+link</p>
     </div>
     
 </body>

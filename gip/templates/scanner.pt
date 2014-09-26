@@ -1,36 +1,13 @@
 <!DOCTYPE html>
  <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>IP/HOST GEOLOCATION TOOL</title>
-  <link rel="stylesheet" href="/static/style.css">
-
-</head>
 <body>
 
-  <form method="get" action="/scanner" class="login">
-  <div align="center"><span align="center" style="color: silver; font-size: 15; ">Port Scanner Tool</span></div>
-    <p>
-      <label for="ip">IP:</label>
-      <input type="text" name="ip" id="ip" value="${host}">
-    </p>
-    <p>
-      <label for="port">Port:</label>
-      <input type="text" name="port"  value="${port}">
-    </p>
-     <p><div align="center"><a href="/">Home Page</a></div></p>
-         <p class="login-submit">
-      <button type="submit" class="login-button">IPGeo</button>
-    </p>
-    <div align="center">
     <p>------------------------------------------</p>
     <p>Scanning host:${host} for tcp port:${port}</p>
     <p>-------------------------------------------</p>
     <p>IP     PORT     STATE</p>
     <p>${host}   ${port}   ${state}
     <p>${msg}</p>
-    </div>
     
 </body>
 </html>

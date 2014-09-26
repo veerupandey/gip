@@ -1,10 +1,6 @@
 <!DOCTYPE html>
  <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>IP/HOST GEOLOCATION TOOL</title>
-  <link rel="stylesheet" href="/static/style.css">
     <style>
       #map_canvas {
         width: 500px;
@@ -29,18 +25,7 @@
   
 </head>
 <body>
-<form  class="login" id='form' action="/geoip" method="get">
-  
-    <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
-     <p> <label for="login">IP/Hostname:</label>
-      <input type="text" name="ip" id="login" value="${host}">
-    </p>
-   <p><div align="center"><a href="/">Home Page</a></div></p>
-    <p class="login-submit">
-      <button  type="submit" class="login-button" id="submit">IPGeo</button>
-    </p>
-    <div class="result"></div>
-<div align="center">
+
 
      <p>----------------------------------------------</p>
     <p>Geolocation for host: ${host}</p>
@@ -50,8 +35,7 @@
     <p>City : ${city}</p>
     <p>Coordinates : ${coordinates}</p>
      <p>Google Maps Link: <a href="http://maps.google.com/maps?q=${coordinates}" target="_blank"> Here</a></p>  
-    
-    </div>
+  
  <div id="map_canvas"></div>
 
 </body>

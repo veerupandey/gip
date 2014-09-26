@@ -1,42 +1,14 @@
 <!DOCTYPE html>
  <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Distance Calculation Tool TOOL</title>
-  <link rel="stylesheet" href="/static/style.css">
-
-</head>
 <body>
 
-  <form method="get" action="/distance_calci" class="login">
   
-    <div align="center"><span align="center" style="color: silver; font-size: 15; ">GeoDistance Calculation Tool</span></div>
-     <p> <label for="location">Latitude1:</label>
-      <input type="text" name="lat1" id="login" value="${lat1}">
-    </p>
-    <p> <label for="location">Longitude1:</label>
-      <input type="text" name="long1" id="login" value="${long1}">
-    </p>
-    <p> <label for="location">Latitude2:</label>
-      <input type="text" name="lat2" id="login" value="${lat2}">
-    </p>
-    <p> <label for="location">Longitude2:</label>
-      <input type="text" name="long2" id="login" value="${long2}">
-    </p>
-    <p><div align="center"><a href="/">Home Page</a></div></p>
-    
-    <p class="login-submit">
-      <button type="submit" class="login-button">IPGeo</button>
-    </p>
-    <div align="center">
     <p>------------------------------------------------------------</p>
     <p>Distance between (${lat1},${long1}) and (${lat2},${long2})</p>
     <p>-----------------------------------------------------------</p>
     <p> In Kilo Meters : ${km} km</p>
     <p> In Miles : ${mile} miles</p>
     <p> In Meters : ${meter} m</p>
-    </div>
     
 </body>
 </html>

@@ -5,10 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>IP/HOST GEOLOCATION TOOL</title>
   <link rel="stylesheet" href="/static/style.css">
+  <script>
+  $("form").submit(function() {
+    $.post($(this).attr("action"), $(this).serialize(), function(data) {
+        $("#c").html(data);
+    });
+    return false; // prevent normal submit
+});
+</script>
 </head>
 <body>
 
-  <form  class="login" id='form' action="/geoip" method="get">
+  <form  class="login" id='form' action="/geoip">
   
     <div align="center"><span align="center" style="color: silver; font-size: 15; ">IP Geolocation Tool</span></div>
      <p> <label for="login">IP/Hostname:</label>
@@ -18,6 +26,6 @@
     <p class="login-submit">
       <button  type="submit" class="login-button" id="submit">IPGeo</button>
     </p>
-    <div class="result"></div>
+    <div id="c" align="center"></div>
 </body>
 </html>
